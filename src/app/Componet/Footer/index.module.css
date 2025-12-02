@@ -1,24 +1,34 @@
+/* ---------------------- */
+/* FOOTER WRAPPER */
+/* ---------------------- */
 .footerWrapper {
   width: 100%;
-  padding: 60px 80px;
+  padding: clamp(40px, 6vw, 80px);
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  gap: clamp(30px, 4vw, 80px);
   background: #e6e2dc;
   font-family: "Times New Roman", serif;
   color: #001a4d;
+  flex-wrap: wrap;
 }
 
-/* Columns */
+/* ---------------------- */
+/* COLUMNS */
+/* ---------------------- */
 .column {
   display: flex;
   flex-direction: column;
   gap: 14px;
+  min-width: 150px;
 }
 
-/* Underline hover animation */
+/* Hover underline */
 .linkItem {
   position: relative;
   cursor: pointer;
+  font-size: clamp(14px, 1.5vw, 18px);
 }
 
 .linkItem::after {
@@ -36,10 +46,12 @@
   width: 100%;
 }
 
-/* Language Selector */
+/* ---------------------- */
+/* LANGUAGE SELECTOR */
+/* ---------------------- */
 .langRow {
   display: flex;
-  gap: 18px;
+  gap: clamp(10px, 2vw, 18px);
   margin-top: 18px;
 }
 
@@ -49,6 +61,7 @@
   border-radius: 30px;
   cursor: pointer;
   transition: 0.3s ease;
+  font-size: clamp(13px, 1.3vw, 16px);
 }
 
 .langBtn:hover {
@@ -56,38 +69,47 @@
   color: white;
 }
 
-/* Center Block */
+/* ---------------------- */
+/* CENTER BLOCK */
+/* ---------------------- */
 .centerBlock {
   text-align: center;
+  flex: 1;
+  min-width: 220px;
 }
 
 .logo {
-  font-size: 36px;
+  font-size: clamp(28px, 4vw, 36px);
   margin-bottom: 20px;
 }
 
-/* Newsletter */
+/* ---------------------- */
+/* NEWSLETTER */
+/* ---------------------- */
 .newsletter {
-  width: 28%;
+  width: clamp(260px, 30%, 320px);
+  min-width: 240px;
 }
 
 .newsTitle {
   line-height: 1.4;
-  font-size: 14px;
+  font-size: clamp(12px, 1.2vw, 14px);
   margin-bottom: 20px;
 }
 
 .iscr {
-  font-size: 26px;
+  font-size: clamp(20px, 3vw, 26px);
   margin-bottom: 16px;
   font-style: italic;
 }
 
-/* Email Input + Arrow */
+/* ---------------------- */
+/* EMAIL INPUT + ARROW */
+/* ---------------------- */
 .emailInputContainer {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: clamp(12px, 2vw, 20px);
 }
 
 .emailInputContainer input {
@@ -99,21 +121,24 @@
   background: transparent;
   transition: border-color 0.3s ease;
   color: #001a4d;
+  font-size: clamp(14px, 1.4vw, 16px);
 }
 
 .emailInputContainer input:focus {
   border-bottom: 1px solid #000;
 }
 
-/* Arrow button */
+/* ---------------------- */
+/* ARROW BUTTON */
+/* ---------------------- */
 .arrowBtn {
   color: #001a4d;
-  width: 70px;
-  height: 70px;
+  width: clamp(50px, 10vw, 70px);
+  height: clamp(50px, 10vw, 70px);
   border-radius: 50%;
   border: 2px solid #001a4d;
   background: transparent;
-  font-size: 28px;
+  font-size: clamp(22px, 5vw, 28px);
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -123,4 +148,28 @@
 .arrowBtn:hover {
   transform: translateX(6px) translateY(-3px);
   background: #001a4d0a;
+}
+
+/* ---------------------- */
+/* MOBILE RESPONSIVE */
+/* ---------------------- */
+@media (max-width: 900px) {
+  .footerWrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .column {
+    align-items: center;
+  }
+
+  .langRow {
+    justify-content: center;
+  }
+
+  .newsletter {
+    width: 100%;
+    max-width: 420px;
+  }
 }

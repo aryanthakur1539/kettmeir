@@ -1,5 +1,6 @@
-/* ------- ORIGINAL YOUR DESIGN (NO CHANGE DONE) -------- */
-
+/* ========================== */
+/* SECTION BASE */
+/* ========================== */
 .section {
   width: 100%;
   padding: 120px 0;
@@ -13,8 +14,12 @@
   text-align: center;
   max-width: 900px;
   margin: 0 auto;
+  padding: 0 20px; /* Phones ke liye safe spacing */
 }
 
+/* ========================== */
+/* HEADINGS */
+/* ========================== */
 .smallheading {
   font-family: "Georgia", serif;
   font-size: 80px;
@@ -43,7 +48,9 @@
   margin-bottom: 50px;
 }
 
-/* Button */
+/* ========================== */
+/* BUTTON */
+/* ========================== */
 .button {
   background: transparent;
   border: 2px solid #0b2b5c;
@@ -71,7 +78,7 @@
   transition: transform 0.35s ease;
 }
 
-/* Hover animation (arrow right + text left) */
+/* Hover animation */
 .button:hover .icon {
   transform: translateX(6px);
 }
@@ -84,9 +91,10 @@
   transform: translateY(-3px);
 }
 
-/* ----------- SCROLL ANIMATION SYSTEM ----------- */
+/* ========================== */
+/* SCROLL ANIMATION SYSTEM */
+/* ========================== */
 
-/* Start hidden */
 .hidden .smallheading,
 .hidden .mainheading,
 .hidden .description,
@@ -95,7 +103,6 @@
   transform: translateY(45px);
 }
 
-/* When animate class added (component visible) */
 .animate .smallheading,
 .animate .mainheading,
 .animate .description,
@@ -103,7 +110,6 @@
   animation: fadeUpSmooth 1s ease-out forwards;
 }
 
-/* Animation delay */
 .animate .smallheading {
   animation-delay: 0.2s;
 }
@@ -117,7 +123,6 @@
   animation-delay: 1s;
 }
 
-/* Keyframes */
 @keyframes fadeUpSmooth {
   0% {
     opacity: 0;
@@ -126,5 +131,120 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* =========================================== */
+/* RESPONSIVE BREAKPOINTS (PERFECT BALANCED) */
+/* =========================================== */
+
+/* Large laptops */
+@media (max-width: 1200px) {
+  .smallheading {
+    font-size: 70px;
+  }
+  .mainheading {
+    font-size: 95px;
+  }
+  .description {
+    font-size: 21px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+  .section {
+    padding: 100px 0;
+  }
+
+  .smallheading {
+    font-size: 60px;
+  }
+
+  .mainheading {
+    font-size: 80px;
+    margin-bottom: 30px;
+  }
+
+  .description {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+
+  .button {
+    padding: 12px 26px;
+  }
+
+  .icon {
+    font-size: 26px;
+  }
+}
+
+/* Large Phones */
+@media (max-width: 700px) {
+  .smallheading {
+    font-size: 48px;
+  }
+
+  .mainheading {
+    font-size: 62px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+}
+
+/* Normal Phones */
+@media (max-width: 500px) {
+  .section {
+    padding: 80px 0;
+  }
+
+  .smallheading {
+    font-size: 40px;
+  }
+
+  .mainheading {
+    font-size: 50px;
+    letter-spacing: 1.5px;
+  }
+
+  .description {
+    font-size: 16px;
+    margin-bottom: 35px;
+    line-height: 1.45;
+  }
+
+  .button {
+    padding: 10px 22px;
+    gap: 10px;
+  }
+
+  .icon {
+    font-size: 22px;
+  }
+
+  .text {
+    font-size: 13px;
+  }
+}
+
+/* Extra Small Phones */
+@media (max-width: 380px) {
+  .smallheading {
+    font-size: 32px;
+  }
+
+  .mainheading {
+    font-size: 42px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .button {
+    padding: 9px 20px;
   }
 }

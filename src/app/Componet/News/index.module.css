@@ -33,7 +33,6 @@
   background: transparent;
   font-size: 20px;
   cursor: pointer;
-  line-height: 1;
 }
 
 /* ===== HIGHLIGHT SECTION ===== */
@@ -50,20 +49,18 @@
   font-size: 20px;
 }
 
-.filledDot {
-  width: 11px;
-  height: 11px;
-  background: #00194a;
-  border-radius: 50%;
-  display: inline-block;
-}
-
+.filledDot,
 .hollowDot {
   width: 11px;
   height: 11px;
-  border: 2px solid #00194a;
   border-radius: 50%;
-  display: inline-block;
+}
+
+.filledDot {
+  background: #00194a;
+}
+.hollowDot {
+  border: 2px solid #00194a;
 }
 
 .mainHeadline {
@@ -113,22 +110,147 @@
   border-bottom: none;
 }
 
-.rowTitle {
-  font-size: 26px;
-  flex: 1;
-  text-align: center;
-  font-weight: 500;
-}
-
+.rowTitle,
 .rowTitleMulti {
   flex: 1;
   text-align: center;
   font-size: 26px;
-  line-height: 1.35;
   font-weight: 500;
+}
+
+.rowTitleMulti {
+  line-height: 1.35;
 }
 
 .arrowDown {
   font-size: 38px;
   opacity: 0.8;
+}
+
+/* ================================================================== */
+/* ======================== RESPONSIVE BREAKPOINTS ================== */
+/* ================================================================== */
+
+/* ========== TABLET (max-width: 1024px) ========== */
+@media (max-width: 1024px) {
+  .header {
+    padding: 40px 40px;
+  }
+
+  .title {
+    font-size: 52px;
+  }
+
+  .highlightSection {
+    padding: 80px 50px;
+  }
+
+  .mainHeadline {
+    font-size: 40px;
+    max-width: 100%;
+  }
+
+  .readBtn {
+    font-size: 20px;
+    padding: 14px 28px;
+  }
+
+  .row {
+    padding: 32px 50px;
+  }
+
+  .rowTitle,
+  .rowTitleMulti {
+    font-size: 22px;
+  }
+
+  .arrowUp,
+  .arrowDown {
+    font-size: 32px;
+  }
+}
+
+/* ========== MOBILE (max-width: 768px) ========== */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 20px;
+  }
+
+  .title {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .allNewsBtn {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+  .highlightSection {
+    padding: 60px 25px;
+  }
+
+  .dateRow {
+    font-size: 16px;
+  }
+
+  .mainHeadline {
+    font-size: 32px;
+  }
+
+  .readBtn {
+    font-size: 18px;
+    padding: 12px 24px;
+  }
+
+  .arrowUp {
+    display: none;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 18px;
+    padding: 30px 25px;
+    text-align: center;
+  }
+
+  .rowTitle,
+  .rowTitleMulti {
+    font-size: 20px;
+  }
+
+  .arrowDown {
+    font-size: 30px;
+  }
+}
+
+/* ========== SMALL MOBILE (max-width: 480px) ========== */
+@media (max-width: 480px) {
+  .title {
+    font-size: 34px;
+  }
+
+  .highlightSection {
+    padding: 45px 20px;
+  }
+
+  .mainHeadline {
+    font-size: 26px;
+  }
+
+  .readBtn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .rowTitle,
+  .rowTitleMulti {
+    font-size: 18px;
+  }
+
+  .arrowDown {
+    font-size: 26px;
+  }
 }
