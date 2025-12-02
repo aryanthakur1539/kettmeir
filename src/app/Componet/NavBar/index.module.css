@@ -1,3 +1,4 @@
+/* NAVBAR */
 .navContainer {
   width: 100%;
   padding: 20px 40px;
@@ -7,21 +8,20 @@
   justify-content: space-between;
   font-family: "Georgia", serif;
   letter-spacing: 1px;
+  position: relative;
+  z-index: 100;
 }
 
-.logoSection {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.logoSection img {
+  width: 60px;
 }
 
+/* DESKTOP LINKS */
 .navLinks {
   display: flex;
   align-items: center;
   gap: 40px;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .navLinks li {
@@ -29,6 +29,7 @@
   color: #0c2441;
   cursor: pointer;
   text-transform: uppercase;
+  transition: 0.3s ease;
 }
 
 .navLinks li:hover {
@@ -38,6 +39,88 @@
 .lang {
   font-size: 14px;
   color: #0c2441;
-  cursor: pointer;
   text-transform: uppercase;
+}
+
+/* ----------------------------
+   PREMIUM HAMBURGER ANIMATION
+---------------------------- */
+.hamburger {
+  display: none;
+  width: 32px;
+  height: 24px;
+  position: relative;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.hamburger span {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #0c2441;
+  border-radius: 4px;
+  transition: 0.4s ease;
+}
+
+/* Lines position */
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+.hamburger span:nth-child(2) {
+  top: 10px;
+}
+.hamburger span:nth-child(3) {
+  top: 20px;
+}
+
+/* ANIMATION - HAMBURGER TO X */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 10px;
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 10px;
+}
+
+/* =======================
+   MOBILE MENU
+========================= */
+@media (max-width: 900px) {
+  .lang {
+    display: none;
+  }
+
+  .navLinks {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    width: 70%;
+    background: #e9e3d8;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    transition: 0.4s ease;
+    z-index: 999;
+  }
+
+  .openMenu {
+    right: 0;
+  }
+
+  .navLinks li {
+    font-size: 18px;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
