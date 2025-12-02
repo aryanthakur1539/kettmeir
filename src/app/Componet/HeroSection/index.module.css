@@ -1,0 +1,19 @@
+.hero {
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  opacity: 0;
+  transform: scale(1.15) translateY(40px);
+  filter: blur(18px);
+  transition: opacity 1.5s ease-out,
+    transform 1.8s cubic-bezier(0.22, 1, 0.36, 1), filter 1.5s ease-out;
+}
+
+.show img {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  filter: blur(0);
+}

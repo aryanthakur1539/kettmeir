@@ -1,0 +1,126 @@
+.footerWrapper {
+  width: 100%;
+  padding: 60px 80px;
+  display: flex;
+  justify-content: space-between;
+  background: #e6e2dc;
+  font-family: "Times New Roman", serif;
+  color: #001a4d;
+}
+
+/* Columns */
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Underline hover animation */
+.linkItem {
+  position: relative;
+  cursor: pointer;
+}
+
+.linkItem::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 1px;
+  background-color: #001a4d;
+  transition: width 0.3s ease;
+}
+
+.linkItem:hover::after {
+  width: 100%;
+}
+
+/* Language Selector */
+.langRow {
+  display: flex;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.langBtn {
+  border: 1px solid #001a4d;
+  padding: 4px 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.langBtn:hover {
+  background: #001a4d;
+  color: white;
+}
+
+/* Center Block */
+.centerBlock {
+  text-align: center;
+}
+
+.logo {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Newsletter */
+.newsletter {
+  width: 28%;
+}
+
+.newsTitle {
+  line-height: 1.4;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.iscr {
+  font-size: 26px;
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+/* Email Input + Arrow */
+.emailInputContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.emailInputContainer input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #001a4d;
+  padding: 8px 0;
+  width: 100%;
+  background: transparent;
+  transition: border-color 0.3s ease;
+  color: #001a4d;
+}
+
+.emailInputContainer input:focus {
+  border-bottom: 1px solid #000;
+}
+
+/* Arrow button */
+.arrowBtn {
+  color: #001a4d;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #001a4d;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s ease, background 0.35s ease;
+}
+
+.arrowBtn:hover {
+  transform: translateX(6px) translateY(-3px);
+  background: #001a4d0a;
+}

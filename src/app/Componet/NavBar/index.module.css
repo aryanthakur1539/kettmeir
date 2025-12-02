@@ -1,0 +1,43 @@
+.navContainer {
+  width: 100%;
+  padding: 20px 40px;
+  background: #e9e3d8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Georgia", serif;
+  letter-spacing: 1px;
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks li {
+  font-size: 14px;
+  color: #0c2441;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.navLinks li:hover {
+  opacity: 0.7;
+}
+
+.lang {
+  font-size: 14px;
+  color: #0c2441;
+  cursor: pointer;
+  text-transform: uppercase;
+}

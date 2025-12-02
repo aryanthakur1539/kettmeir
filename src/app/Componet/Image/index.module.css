@@ -1,0 +1,35 @@
+.hero {
+  img {
+    width: 100%;
+  }
+}
+
+.hero img {
+  width: 100%;
+  opacity: 0; /* initial hidden */
+  transform: scale(1.2); /* thoda zoomed out */
+  transition: opacity 1s ease, transform 1s ease;
+  animation: imgFadeZoom 1s forwards;
+}
+
+/* Keyframes for fade + zoom animation */
+@keyframes imgFadeZoom {
+  0% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Optional hover effect for extra flair */
+.hero img:hover {
+  transform: scale(1.05);
+  transition: transform 0.5s ease;
+}
+
+.animateImg {
+  animation: imgFadeZoom 1s forwards;
+}
